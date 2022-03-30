@@ -1,0 +1,37 @@
+C:\ADB\platform-tools>adb devices
+List of devices attached
+ef6fca80        device
+
+
+
+C:\ADB\platform-tools>adb devices -l
+List of devices attached
+ef6fca80               device product:OnePlus7 model:GM1901 device:OnePlus7 transport_id:1
+
+
+
+
+C:\ADB\platform-tools>adb shell
+OnePlus7:/ $ ls
+acct  bugreports  d            debug_ramdisk  etc              linkerconfig  mnt  op_plat_sepolicy.cil  product  storage  system_ext
+apex  cache       data         default.prop   init             lost+found    odm  postinstall           res      sys      vendor
+bin   config      data_mirror  dev            init.environ.rc  metadata      oem  proc                  sdcard   system
+
+
+
+C:\ADB\platform-tools>C:adb push C:\Users\dell\Downloads\abc.png /storage/self/primary/Documents
+C:\Users\dell\Downloads\abc.png: 1 file pushed, 0 skipped. 5.6 MB/s (4133 bytes in 0.001s)
+
+
+C:\ADB\platform-tools>adb pull /storage/self/primary/Resume.docx C:\Users\dell\Documents
+/storage/self/primary/Resume.docx: 1 file pulled, 0 skipped. 3.8 MB/s (55066 bytes in 0.014s)
+
+
+adb logcat | findstr camera 
+
+
+adb shell logcat -v threadtime > logs.txt
+
+
+
+C:\ADB\platform-tools>adb shell settings put system screen_brightness 50
